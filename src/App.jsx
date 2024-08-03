@@ -1,7 +1,11 @@
+import Navbar from './components/Navbar';
+import SideBar from './components/SideBar';
+
 function App() {
     return (
         <>
-            <h1>App Component</h1>
+            <Navbar />
+            <SideBar />
         </>
     );
 }
