@@ -52,9 +52,11 @@ const ProductOverviewCard = () => {
     return (
         <Box
             display={'flex'}
+            justifyContent={'space-evenly'}
             gap={isNonLaptop ? '10px' : '5px'}
             width={isNonLaptop ? '70%' : '100%'}
-            paddingLeft={'5px'}
+            // paddingLeft={'5px'}
+            height={'150px'}
         >
             {products.map((prod, ind) => (
                 <Paper
