@@ -12,6 +12,12 @@ import bellImg from './bell-img.png';
 import notificationImg from './notification-img.png';
 import userProfile from './user-profile.png';
 import logo from './logo.png';
+import cartCheck from './cart-check-img.png';
+import statsImg from './stats-img.png';
+import taskImg from './task-img.png';
+import walletImg from './wallet.png';
+import logoutImg from './logout.png';
+import homeImg from './home.png';
 
 export {
     burgerImg,
@@ -28,4 +34,10 @@ export {
     notificationImg,
     userProfile,
     logo,
+    cartCheck,
+    statsImg,
+    taskImg,
+    walletImg,
+    logoutImg,
+    homeImg,
 };

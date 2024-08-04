@@ -19,7 +19,15 @@ import Button from '@mui/material/Button';
 import SearchIcon from '@mui/icons-material/Search';
 import theme from '../utils/theme.json';
 
-import { settingImg, bellImg, notificationImg, userProfile, menuImg, logo } from '../assets/index';
+import {
+    settingImg,
+    bellImg,
+    notificationImg,
+    userProfile,
+    menuImg,
+    logo,
+    logoutImg,
+} from '../assets/index';
 
 const drawerWidth = 240;
 // const navItems = ['Home', 'About', 'Contact'];
@@ -76,7 +84,12 @@ function Navbar(props) {
     };
 
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+        <Box
+            onClick={handleDrawerToggle}
+            sx={{ textAlign: 'center', height: '10vh' }}
+            // height={'10vh'}
+            display={'block'}
+        >
             {/* <Typography variant='h6' sx={{ my: 2 }}>
                 MUI
             </Typography> */}
@@ -84,7 +97,7 @@ function Navbar(props) {
                 src={logo}
                 alt=''
                 width={'40px'}
-                height={'40px'}
+                // height={'40px'}
                 style={{
                     borderRadius: '1rem',
                     // border: '1px solid',
