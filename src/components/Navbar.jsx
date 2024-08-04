@@ -30,7 +30,6 @@ import {
 } from '../assets/index';
 
 const drawerWidth = 240;
-// const navItems = ['Home', 'About', 'Contact'];
 const navItems = [settingImg, bellImg, notificationImg, userProfile];
 
 const Search = styled('div')(({ theme }) => ({
@@ -87,25 +86,18 @@ function Navbar(props) {
         <Box
             onClick={handleDrawerToggle}
             sx={{ textAlign: 'center', height: '10vh' }}
-            // height={'10vh'}
             display={'block'}
         >
-            {/* <Typography variant='h6' sx={{ my: 2 }}>
-                MUI
-            </Typography> */}
             <img
                 src={logo}
                 alt=''
                 width={'40px'}
-                // height={'40px'}
                 style={{
                     borderRadius: '1rem',
-                    // border: '1px solid',
                     objectFit: 'cover',
                     padding: '5px',
                     background: '#3b3a3a',
                     color: 'white',
-                    // marginRight: '10px',
                 }}
             />
             <Divider />
@@ -126,20 +118,11 @@ function Navbar(props) {
                         height={'40px'}
                         style={{
                             borderRadius: '1rem',
-                            // border: '1px solid',
                             objectFit: 'cover',
                             padding: '5px',
-                            // display: 'block',
-                            // background: '#3b3a3a',
                             color: 'white',
-                            // marginRight: '10px',
                         }}
                     />
-                    // <ListItem key={item} disablePadding>
-                    //     <ListItemButton sx={{ textAlign: 'center' }}>
-                    //         <ListItemText primary={item} />
-                    //     </ListItemButton>
-                    // </ListItem>
                 ))}
             </List>
         </Box>
@@ -157,7 +140,7 @@ function Navbar(props) {
         >
             <CssBaseline />
             <AppBar component='nav' sx={{ bgcolor: theme.dark.colors.nav.body }}>
-                <Toolbar>
+                <Toolbar sx={{ padding: { sm: '5px', md: '10px !important' } }}>
                     <IconButton
                         color='inherit'
                         aria-label='open drawer'
@@ -167,13 +150,7 @@ function Navbar(props) {
                     >
                         <MenuIcon />
                     </IconButton>
-                    {/* <Typography
-                        variant='h6'
-                        component='div'
-                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-                    >
-                        MUI
-                    </Typography> */}
+
                     <img
                         src={logo}
                         alt=''
@@ -190,7 +167,12 @@ function Navbar(props) {
                         }}
                     />
                     <Box display={'flex'} justifyContent={'space-between'} width={'95%'}>
-                        <Search sx={{ display: { xs: 'none', sm: 'block', display: 'flex' } }}>
+                        <Search
+                            sx={{
+                                display: { xs: 'none', sm: 'block', display: 'flex' },
+                                left: '20px',
+                            }}
+                        >
                             <SearchIconWrapper>
                                 <SearchIcon />
                             </SearchIconWrapper>
@@ -226,9 +208,6 @@ function Navbar(props) {
                                         // marginRight: '10px',
                                     }}
                                 />
-                                // <Button key={item} sx={{ color: '#fff' }}>
-                                //     {item}
-                                // </Button>
                             ))}
                         </Box>
                     </Box>
