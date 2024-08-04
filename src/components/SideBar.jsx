@@ -16,14 +16,16 @@ function SideBar() {
                 background: theme.dark.colors.nav.body,
                 marginTop: '45px',
                 paddingTop: '30px',
-                paddingLeft: '10px',
-                paddingRight: '10px',
+                // paddingLeft: '10px',
+                // paddingRight: '10px',
                 paddingBottom: '10px',
                 justifyContent: 'space-between',
                 // height: '100%',
             }}
         >
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            <Box
+                sx={{ display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center' }}
+            >
                 {sideBar.map((icon, ind) => (
                     <img
                         style={{
@@ -35,7 +37,8 @@ function SideBar() {
                         src={icon}
                         alt=''
                         key={ind}
-                        /* height={'40px'} */ width={'100%'}
+                        width={'35px'}
+                        // width={'100%'}
                         onClick={() => setClickIndex(ind)}
                     />
                 ))}
