@@ -61,6 +61,7 @@ const ProductOverviewCard = () => {
             {products.map((prod, ind) => (
                 <Paper
                     elevation={6}
+                    key={ind}
                     sx={{
                         width: '23%',
                         // marginLeft: isNonLaptop ? '10px' : '5px',
