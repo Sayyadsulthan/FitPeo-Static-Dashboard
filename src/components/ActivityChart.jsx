@@ -60,7 +60,7 @@ export const ActivityChart = () => {
                         color: 'white',
                     },
                 ]}
-                width={isNonLaptop ? 800 : isNonMobile ? 600 : 350}
+                width={isNonLaptop ? 650 : isNonMobile ? 350 : 350}
                 height={250}
                 color={colors}
                 borderRadius={50}

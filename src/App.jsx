@@ -6,6 +6,8 @@ import ProductOverviewCard from './components/ProductOverviewCard';
 import NetProfitCard from './components/NetProfitCard';
 import { ActivityChart } from './components/ActivityChart';
 import MenuOverview from './components/MenuOverview';
+import OrdersTable from './components/OrdersTable';
+import CustomerReviewsCard from './components/CustomerReviewsCard';
 function App() {
     const isNonLaptop = useMediaQuery('(min-width:770px)');
     const isNonMobile = useMediaQuery('(min-width:550px)');
@@ -21,6 +23,7 @@ function App() {
                     bgcolor={theme.dark.colors.body}
                     gap={5}
                 >
+                    {/* First Row */}
                     <Box
                         bgcolor={theme.dark.colors.body}
                         width={'100%'} /* height={'100%'}*/
@@ -33,6 +36,7 @@ function App() {
                         <ProductOverviewCard />
                         <NetProfitCard />
                     </Box>
+                    {/* Second rows */}
                     <Box
                         display={'flex'}
                         width={'100%'}
@@ -46,6 +50,17 @@ function App() {
                     >
                         <ActivityChart />
                         <MenuOverview />
+                    </Box>
+                    {/* Third rows */}
+                    <Box
+                        display={'flex'}
+                        flexDirection={isNonMobile ? 'row' : 'column'}
+                        justifyContent={isNonLaptop ? 'center' : 'center'}
+                        alignItems={isNonMobile ? '' : 'center'}
+                        gap={'10px'}
+                    >
+                        <OrdersTable />
+                        <CustomerReviewsCard />
                     </Box>
                 </Box>
             </Box>
