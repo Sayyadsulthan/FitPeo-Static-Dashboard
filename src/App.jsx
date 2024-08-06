@@ -58,6 +58,7 @@ function App() {
                         justifyContent={isNonLaptop ? 'center' : 'center'}
                         alignItems={isNonMobile ? '' : 'center'}
                         gap={'10px'}
+                        width={'100%'}
                     >
                         <OrdersTable />
                         <CustomerReviewsCard />
