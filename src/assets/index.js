@@ -20,6 +20,7 @@ import logoutImg from './logout.png';
 import homeImg from './home.png';
 import arrowUp from './arrow-up.png';
 import arrowDown from './arrow-down.png';
+import arrowLeft from './left-arrow.png';
 
 export {
     burgerImg,
@@ -44,4 +45,5 @@ export {
     homeImg,
     arrowDown,
     arrowUp,
+    arrowLeft,
 };

@@ -5,6 +5,7 @@ import theme from './utils/theme.json';
 import ProductOverviewCard from './components/ProductOverviewCard';
 import NetProfitCard from './components/NetProfitCard';
 import { ActivityChart } from './components/ActivityChart';
+import MenuOverview from './components/MenuOverview';
 function App() {
     const isNonLaptop = useMediaQuery('(min-width:770px)');
     const isNonMobile = useMediaQuery('(min-width:550px)');
@@ -35,12 +36,16 @@ function App() {
                     <Box
                         display={'flex'}
                         width={'100%'}
-                        justifyContent={'center'}
-                        padding={2}
+                        justifyContent={isNonLaptop ? 'center' : 'center'}
+                        alignItems={isNonMobile ? '' : 'center'}
+                        padding={'5px'}
+                        paddingLeft={'0'}
+                        gap={2}
                         flexDirection={isNonMobile ? 'row' : 'column'}
                         // alignItems={'center'}
                     >
                         <ActivityChart />
+                        <MenuOverview />
                     </Box>
                 </Box>
             </Box>
